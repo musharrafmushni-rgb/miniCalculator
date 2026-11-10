@@ -1,0 +1,21 @@
+/* Calculator Buttons Styling */
+.calc-btn {
+    @apply text-xl font-semibold py-4 rounded-xl transition-all duration-200 flex items-center justify-center relative overflow-hidden;
+}
+
+/* Button Click Animation */
+.calc-btn:active {
+    transform: scale(0.95);
+    box-shadow: none;
+}
+
+/* Click Pulse Animation (புதிதாக சேர்க்கப்பட்டது) */
+@keyframes buttonPulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+
+.btn-clicked {
+    animation: buttonPulse 0.4s ease-out;
+}
